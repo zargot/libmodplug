@@ -82,6 +82,9 @@ else ()
   add_definitions(-DMODPLUG_STATIC)
 endif()
 
+# remove fade effect
+add_definitions(-DMODPLUG_FASTSOUNDLIB)
+
 add_library(modplug ${LIB_TYPE}
   src/libmodplug/it_defs.h
   src/libmodplug/sndfile.h
