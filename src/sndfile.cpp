@@ -142,26 +142,26 @@ BOOL CSoundFile::Create(LPCBYTE lpStream, DWORD dwMemLength)
 		 && (!ReadWav(lpStream, dwMemLength))
 #ifndef MODPLUG_BASIC_SUPPORT
 /* Sequencer File Format Support */
-		 && (!ReadABC(lpStream, dwMemLength))
-		 && (!ReadMID(lpStream, dwMemLength))
-		 && (!ReadPAT(lpStream, dwMemLength))
-		 && (!ReadSTM(lpStream, dwMemLength))
-		 && (!ReadMed(lpStream, dwMemLength))
-		 && (!ReadMTM(lpStream, dwMemLength))
-		 && (!ReadMDL(lpStream, dwMemLength))
-		 && (!ReadDBM(lpStream, dwMemLength))
-		 && (!Read669(lpStream, dwMemLength))
-		 && (!ReadFAR(lpStream, dwMemLength))
-		 && (!ReadAMS(lpStream, dwMemLength))
-		 && (!ReadOKT(lpStream, dwMemLength))
-		 && (!ReadPTM(lpStream, dwMemLength))
-		 && (!ReadUlt(lpStream, dwMemLength))
-		 && (!ReadDMF(lpStream, dwMemLength))
-		 && (!ReadDSM(lpStream, dwMemLength))
-		 && (!ReadUMX(lpStream, dwMemLength))
-		 && (!ReadAMF(lpStream, dwMemLength))
-		 && (!ReadPSM(lpStream, dwMemLength))
-		 && (!ReadMT2(lpStream, dwMemLength))
+		 /* && (!ReadABC(lpStream, dwMemLength)) */
+		 /* && (!ReadMID(lpStream, dwMemLength)) */
+		 /* && (!ReadPAT(lpStream, dwMemLength)) */
+		 /* && (!ReadSTM(lpStream, dwMemLength)) */
+		 /* && (!ReadMed(lpStream, dwMemLength)) */
+		 /* && (!ReadMTM(lpStream, dwMemLength)) */
+		 /* && (!ReadMDL(lpStream, dwMemLength)) */
+		 /* && (!ReadDBM(lpStream, dwMemLength)) */
+		 /* && (!Read669(lpStream, dwMemLength)) */
+		 /* && (!ReadFAR(lpStream, dwMemLength)) */
+		 /* && (!ReadAMS(lpStream, dwMemLength)) */
+		 /* && (!ReadOKT(lpStream, dwMemLength)) */
+		 /* && (!ReadPTM(lpStream, dwMemLength)) */
+		 /* && (!ReadUlt(lpStream, dwMemLength)) */
+		 /* && (!ReadDMF(lpStream, dwMemLength)) */
+		 /* && (!ReadDSM(lpStream, dwMemLength)) */
+		 /* && (!ReadUMX(lpStream, dwMemLength)) */
+		 /* && (!ReadAMF(lpStream, dwMemLength)) */
+		 /* && (!ReadPSM(lpStream, dwMemLength)) */
+		 /* && (!ReadMT2(lpStream, dwMemLength)) */
 #endif // MODPLUG_BASIC_SUPPORT
 		 && (!ReadMod(lpStream, dwMemLength))) m_nType = MOD_TYPE_NONE;
 #ifdef MMCMP_SUPPORT

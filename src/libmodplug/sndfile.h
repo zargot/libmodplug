@@ -632,33 +632,33 @@ public:
 	BOOL ReadXM(LPCBYTE lpStream, DWORD dwMemLength);
 	BOOL ReadS3M(LPCBYTE lpStream, DWORD dwMemLength);
 	BOOL ReadMod(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadMed(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadMTM(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadSTM(LPCBYTE lpStream, DWORD dwMemLength);
+	/* BOOL ReadMed(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadMTM(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadSTM(LPCBYTE lpStream, DWORD dwMemLength); */
 	BOOL ReadIT(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL Read669(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadUlt(LPCBYTE lpStream, DWORD dwMemLength);
+	/* BOOL Read669(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadUlt(LPCBYTE lpStream, DWORD dwMemLength); */
 	BOOL ReadWav(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadDSM(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadFAR(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadAMS(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadAMS2(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadMDL(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadOKT(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadDMF(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadPTM(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadDBM(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadAMF(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadMT2(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadPSM(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadJ2B(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadUMX(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadABC(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL TestABC(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadMID(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL TestMID(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL ReadPAT(LPCBYTE lpStream, DWORD dwMemLength);
-	BOOL TestPAT(LPCBYTE lpStream, DWORD dwMemLength);
+	/* BOOL ReadDSM(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadFAR(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadAMS(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadAMS2(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadMDL(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadOKT(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadDMF(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadPTM(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadDBM(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadAMF(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadMT2(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadPSM(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadJ2B(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadUMX(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadABC(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL TestABC(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadMID(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL TestMID(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL ReadPAT(LPCBYTE lpStream, DWORD dwMemLength); */
+	/* BOOL TestPAT(LPCBYTE lpStream, DWORD dwMemLength); */
 	// Save Functions
 #ifndef MODPLUG_NO_FILESAVE
 	UINT WriteSample(FILE *f, MODINSTRUMENT *pins, UINT nFlags, UINT nMaxLen=0);
