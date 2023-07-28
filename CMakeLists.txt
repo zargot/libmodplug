@@ -82,6 +82,10 @@ else ()
   add_definitions(-DMODPLUG_STATIC)
 endif()
 
+# enable link time optimization
+add_compile_options(-flto)
+add_link_options(-flto)
+
 # remove fade effect
 add_definitions(-DMODPLUG_FASTSOUNDLIB)
 
