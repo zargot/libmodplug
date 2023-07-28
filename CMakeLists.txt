@@ -89,6 +89,9 @@ add_link_options(-flto)
 # remove fade effect
 add_definitions(-DMODPLUG_FASTSOUNDLIB)
 
+# exclude uncommon formats
+add_definitions(-DMODPLUG_BASIC_SUPPORT)
+
 add_library(modplug ${LIB_TYPE}
   src/libmodplug/it_defs.h
   src/libmodplug/sndfile.h
