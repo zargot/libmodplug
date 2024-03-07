@@ -82,37 +82,47 @@ else ()
   add_definitions(-DMODPLUG_STATIC)
 endif()
 
+# enable link time optimization
+add_compile_options(-flto)
+add_link_options(-flto)
+
+# remove fade effect
+add_definitions(-DMODPLUG_FASTSOUNDLIB)
+
+# exclude uncommon formats
+add_definitions(-DMODPLUG_BASIC_SUPPORT)
+
 add_library(modplug ${LIB_TYPE}
   src/libmodplug/it_defs.h
   src/libmodplug/sndfile.h
   src/libmodplug/stdafx.h
 
   src/fastmix.cpp
-  src/load_669.cpp
-  src/load_abc.cpp
-  src/load_amf.cpp
-  src/load_ams.cpp
-  src/load_dbm.cpp
-  src/load_dmf.cpp
-  src/load_dsm.cpp
-  src/load_far.cpp
+  # src/load_669.cpp
+  # src/load_abc.cpp
+  # src/load_amf.cpp
+  # src/load_ams.cpp
+  # src/load_dbm.cpp
+  # src/load_dmf.cpp
+  # src/load_dsm.cpp
+  # src/load_far.cpp
   src/load_it.cpp
-  src/load_j2b.cpp
-  src/load_mdl.cpp
-  src/load_med.cpp
-  src/load_mid.cpp
+  # src/load_j2b.cpp
+  # src/load_mdl.cpp
+  # src/load_med.cpp
+  # src/load_mid.cpp
   src/load_mod.cpp
-  src/load_mt2.cpp
-  src/load_mtm.cpp
-  src/load_okt.cpp
-  src/load_pat.cpp
-  src/load_pat.h
-  src/load_psm.cpp
-  src/load_ptm.cpp
+  # src/load_mt2.cpp
+  # src/load_mtm.cpp
+  # src/load_okt.cpp
+  # src/load_pat.cpp
+  # src/load_pat.h
+  # src/load_psm.cpp
+  # src/load_ptm.cpp
   src/load_s3m.cpp
-  src/load_stm.cpp
-  src/load_ult.cpp
-  src/load_umx.cpp
+  # src/load_stm.cpp
+  # src/load_ult.cpp
+  # src/load_umx.cpp
   src/load_wav.cpp
   src/load_xm.cpp
   src/mmcmp.cpp
@@ -131,6 +141,10 @@ if (BUILD_SHARED_LIBS)
     target_link_libraries(modplug -Wl,-undefined,error)
     target_link_libraries(modplug -Wl,-compatibility_version,2.0.0)
     target_link_libraries(modplug -Wl,-current_version,2.0.0)
+  elseif(WIN32)
+    target_compile_options(modplug PUBLIC -static -static-libstdc++ -static-libgcc)
+    target_link_libraries(modplug -static -static-libstdc++ -static-libgcc)
+    set_target_properties(modplug PROPERTIES OUTPUT_NAME "modplug-1")
   else()
     if(HAVE_NO_UNDEFINED)
       target_link_libraries(modplug -Wl,--no-undefined)
